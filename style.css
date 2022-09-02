@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 375px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.text {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.text > h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+.text > h2 > span {
+    font-weight: 600;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px  hsl(234, 12%, 34%, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+}
+ .rule {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    margin-top: 0px;
+    background-color: aqua;
+    width: 98%;
+    height: 5px;
+    z-index: 2;
+    border-radius: 10px;
+}
+.card:nth-child(1) > .rule {
+    background-color: hsl(180, 62%, 55%);
+}
+.card:nth-child(2) > .rule {
+    background-color: hsl(0, 78%, 62%);
+}
+.card:nth-child(3) > .rule {
+    background-color: hsl(34, 97%, 64%);
+}
+.card:nth-child(4) > .rule {
+    background-color: hsl(212, 86%, 64%);
+}
+.card >p >span {
+    font-weight: 600;
+    font-size: 24px;
+}
+.card >p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+.card >.image {
+    text-align: right;
+}
+
+@media (min-width:375px){
+    body {
+        width: 100vw;
+    }
+    .card-container {
+        margin: auto;
+        display: block;
+        column-count: 3;
+        column-width: 300px;
+        column-gap: 40px;
+    }
+    .card:nth-child(1){
+        position: relative;
+        top: 115px;
+    }
+    .card:nth-child(4){
+        position: relative;
+        top: 120px;
+    }
+}
